@@ -1,0 +1,333 @@
+/* CSS will go here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header Styles */
+header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 20px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.language-selector {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid #aaa;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.sign-in {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%), url('./assests/images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.email-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email-input {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.get-started {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    border-top: 8px solid #222;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.feature-text {
+    flex: 1;
+    padding: 0 50px;
+}
+
+.feature-image {
+    flex: 1;
+    position: relative;
+}
+
+.feature-image img {
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.feature-video {
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    width: 73%;
+    height: 54%;
+    z-index: 1;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 20px;
+    border-top: 8px solid #222;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq h3 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.faq-question {
+    background: #303030;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.faq-answer {
+    background: #303030;
+    color: white;
+    padding: 20px;
+    font-size: 1.5rem;
+    display: none;
+    margin-top: 2px;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+.faq-icon {
+    font-size: 2rem;
+}
+
+/* Footer */
+footer {
+    padding: 50px 20px;
+    border-top: 8px solid #222;
+    color: #757575;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.footer-link {
+    color: #757575;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+    .feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature.reverse {
+        flex-direction: column-reverse;
+    }
+
+    .feature-text {
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .email-form {
+        flex-direction: column;
+    }
+
+    .email-input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .get-started {
+        border-radius: 4px;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-question,
+    .faq-answer {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .language-selector,
+    .sign-in {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+}
